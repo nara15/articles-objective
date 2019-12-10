@@ -11,8 +11,10 @@
 #ifndef APIClient_h
 #define APIClient_h
 
-#import <APIRequest.h>
-#import <APIResponse.h>
+#import "APIRequest.h"
+#import "APIResponse.h"
+
+typedef void(^APIClientCompletionBlock)(id<APIResponse> response);
 
 @protocol APIClient <NSObject>
 
