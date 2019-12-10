@@ -16,6 +16,11 @@
 		63DA049C23A02CCE004F5CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA049B23A02CCE004F5CCB /* main.m */; };
 		63DA04A623A02CCF004F5CCB /* articles_objectiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04A523A02CCF004F5CCB /* articles_objectiveTests.m */; };
 		63DA04B123A02CCF004F5CCB /* articles_objectiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04B023A02CCF004F5CCB /* articles_objectiveUITests.m */; };
+		63DA04C523A0317A004F5CCB /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04C423A0317A004F5CCB /* Article.m */; };
+		63DA04CA23A03C97004F5CCB /* HTTPMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04C923A03C97004F5CCB /* HTTPMethod.m */; };
+		63DA04CF23A03FF8004F5CCB /* APIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04CE23A03FF8004F5CCB /* APIResponse.m */; };
+		63DA04D423A043B2004F5CCB /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04D323A043B2004F5CCB /* APIRequest.m */; };
+		63DA04D723A04642004F5CCB /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DA04D623A04642004F5CCB /* APIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,17 @@
 		63DA04AC23A02CCF004F5CCB /* articles-objectiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "articles-objectiveUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DA04B023A02CCF004F5CCB /* articles_objectiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = articles_objectiveUITests.m; sourceTree = "<group>"; };
 		63DA04B223A02CCF004F5CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63DA04C223A0301B004F5CCB /* ArticlesListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesListViewModel.h; sourceTree = "<group>"; };
+		63DA04C323A03047004F5CCB /* Article.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		63DA04C423A0317A004F5CCB /* Article.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		63DA04C723A03C04004F5CCB /* HTTPMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPMethod.h; sourceTree = "<group>"; };
+		63DA04C923A03C97004F5CCB /* HTTPMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPMethod.m; sourceTree = "<group>"; };
+		63DA04CD23A03E1A004F5CCB /* APIResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIResponse.h; sourceTree = "<group>"; };
+		63DA04CE23A03FF8004F5CCB /* APIResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIResponse.m; sourceTree = "<group>"; };
+		63DA04D223A042EA004F5CCB /* APIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
+		63DA04D323A043B2004F5CCB /* APIRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
+		63DA04D523A044C1004F5CCB /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		63DA04D623A04642004F5CCB /* APIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +120,14 @@
 		63DA048823A02CCD004F5CCB /* articles-objective */ = {
 			isa = PBXGroup;
 			children = (
+				63DA04C623A03BEE004F5CCB /* Modules */,
+				63DA04C023A02E8F004F5CCB /* ViewControllers */,
+				63DA04BF23A02E86004F5CCB /* Models */,
+				63DA04BE23A02E79004F5CCB /* ViewModels */,
 				63DA048923A02CCD004F5CCB /* AppDelegate.h */,
 				63DA048A23A02CCD004F5CCB /* AppDelegate.m */,
 				63DA048C23A02CCD004F5CCB /* SceneDelegate.h */,
 				63DA048D23A02CCD004F5CCB /* SceneDelegate.m */,
-				63DA048F23A02CCD004F5CCB /* ViewController.h */,
-				63DA049023A02CCD004F5CCB /* ViewController.m */,
 				63DA049223A02CCD004F5CCB /* Main.storyboard */,
 				63DA049523A02CCE004F5CCB /* Assets.xcassets */,
 				63DA049723A02CCE004F5CCB /* LaunchScreen.storyboard */,
@@ -135,6 +153,79 @@
 				63DA04B223A02CCF004F5CCB /* Info.plist */,
 			);
 			path = "articles-objectiveUITests";
+			sourceTree = "<group>";
+		};
+		63DA04BE23A02E79004F5CCB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04C223A0301B004F5CCB /* ArticlesListViewModel.h */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		63DA04BF23A02E86004F5CCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04C323A03047004F5CCB /* Article.h */,
+				63DA04C423A0317A004F5CCB /* Article.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63DA04C023A02E8F004F5CCB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63DA048F23A02CCD004F5CCB /* ViewController.h */,
+				63DA049023A02CCD004F5CCB /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63DA04C123A02F4F004F5CCB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04CC23A03DA4004F5CCB /* Response */,
+				63DA04CB23A03D98004F5CCB /* Request */,
+				63DA04C823A03C7A004F5CCB /* Methods */,
+				63DA04D523A044C1004F5CCB /* APIClient.h */,
+				63DA04D623A04642004F5CCB /* APIClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63DA04C623A03BEE004F5CCB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04C123A02F4F004F5CCB /* Networking */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		63DA04C823A03C7A004F5CCB /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04C723A03C04004F5CCB /* HTTPMethod.h */,
+				63DA04C923A03C97004F5CCB /* HTTPMethod.m */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		63DA04CB23A03D98004F5CCB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04D223A042EA004F5CCB /* APIRequest.h */,
+				63DA04D323A043B2004F5CCB /* APIRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		63DA04CC23A03DA4004F5CCB /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				63DA04CD23A03E1A004F5CCB /* APIResponse.h */,
+				63DA04CE23A03FF8004F5CCB /* APIResponse.m */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DA04CF23A03FF8004F5CCB /* APIResponse.m in Sources */,
+				63DA04C523A0317A004F5CCB /* Article.m in Sources */,
+				63DA04D423A043B2004F5CCB /* APIRequest.m in Sources */,
 				63DA049123A02CCD004F5CCB /* ViewController.m in Sources */,
+				63DA04D723A04642004F5CCB /* APIClient.m in Sources */,
+				63DA04CA23A03C97004F5CCB /* HTTPMethod.m in Sources */,
 				63DA048B23A02CCD004F5CCB /* AppDelegate.m in Sources */,
 				63DA049C23A02CCE004F5CCB /* main.m in Sources */,
 				63DA048E23A02CCD004F5CCB /* SceneDelegate.m in Sources */,
