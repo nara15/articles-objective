@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "../Modules/JSONSerialization/NSObject+JSONSerialization.h"
 
 @interface Article : NSObject
 
 @property (nonatomic, strong, readonly) NSString* title;
 @property (nonatomic, strong, readonly) NSString* description_text;
 @property (nonatomic, strong, readonly) NSString* author;
+@property (nonatomic, strong, readonly) NSString* date;
+@property (nonatomic, strong, readonly) NSString* link;
 
 - (instancetype)initWithDictionary:(NSDictionary*)userDictionary;
 

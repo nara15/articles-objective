@@ -11,6 +11,16 @@
 
 @implementation Article
 
++ (NSDictionary*) mapping {
+    return @{ @"title": @"title",
+              @"description": @"description_text",
+              @"author": @"author",
+              @"article_date": @"date",
+              @"link": @"link"
+              
+    };
+}
+
 - (instancetype) initWithDictionary:(NSDictionary *)userDictionary {
     self = [super init];
     if (!self) {
